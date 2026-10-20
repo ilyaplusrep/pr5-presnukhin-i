@@ -1,0 +1,9 @@
+out/
+.idea/
+*.iml
+*.class
+sources.txt
+.vscode/
+
+# материалы методички
+Практическая работа*

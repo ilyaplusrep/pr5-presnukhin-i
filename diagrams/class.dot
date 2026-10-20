@@ -1,0 +1,8 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.5];
+node [shape=record, style="filled", fontname="Times New Roman,", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman,", fontsize=9, color="#555555"];
+s [label="{SelfCheck|- passed : int\l- failed : int\l|+ main(String[]) void\l- runUnitChecks() void\l- runDataChecks() void\l- runInteractive() void\l}"];
+a [label="{TimesheetAnalyzer|- DAYS_EXPECTED = 5\l- MAX_HOURS = 16\l- DAILY_NORMAL_HOURS = 10\l- WEEKLY_LIMIT_HOURS = 40\l- HEAVY_DAYS_HOURS = 12\l|+ parseHours(String) int[]\l+ total(int[]) int\l+ average(int[]) double\l+ overtimeDays(int[]) int\l+ weeklyOvertime(int[]) int\l+ addHeavyDaysCount(int[]) int\l- checkHours(int[]) void\l}"];
+s -> a [label="uses", style=dashed, arrowhead=vee];
+}
