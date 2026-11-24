@@ -24,7 +24,7 @@ public class TimesheetAnalyzer {
                 throw new IllegalArgumentException ("Ошибка: позиция " + (i+1) + " – значение \"" + days[i] + "\" не является целым числом");
             }
 
-            int hoursPerDay = Integer.parseInt(days[i]);
+            int hoursPerDay = days[i].length() > 2 ? MAX_HOURS + 1 : Integer.parseInt(days[i]); // >2 цифр заведомо вне диапазона, без переполнения int
             if(hoursPerDay>MAX_HOURS){
                 throw new IllegalArgumentException ("Ошибка: позиция " + (i+1) + " – значение " + days[i] +" вне диапазона [0, " + MAX_HOURS + "]");
             }

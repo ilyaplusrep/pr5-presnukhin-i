@@ -29,7 +29,7 @@ run_selfcheck.bat
 После проверок программа читает строки табеля с консоли (выход: `exit` или пустая строка):
 
 ```bash
-java -cp out ru.edu.pr02.SelfCheck -i
+java -cp out ru.edu.pr02.SelfCheck --interactive
 ```
 
 или `run_interactive.bat` на Windows.

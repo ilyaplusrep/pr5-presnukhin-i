@@ -27,7 +27,7 @@ public class SelfCheck {
         System.out.println("Data-driven: " + dataPassed + "/" + dataTotal + " passed");
 
         // интерактив только по флагу -i, иначе run_selfcheck.bat повиснет в ожидании ввода
-        if (args.length > 0 && args[0].equals("-i")) {
+        if (args.length > 0 && (args[0].equals("-i") || args[0].equals("--interactive"))) {
             runInteractive();
         }
     }
